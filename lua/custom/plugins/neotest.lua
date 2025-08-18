@@ -5,7 +5,7 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
     'antoinemadec/FixCursorHold.nvim',
-    'nvim-neotest/neotest-go',
+    'fredrikaverpil/neotest-golang',
     'rouge8/neotest-rust',
     'nvim-neotest/neotest-plenary',
     'nvim-neotest/neotest-vim-test',
@@ -13,8 +13,8 @@ return {
   config = function()
     require('neotest').setup {
       adapters = {
-        require 'neotest-go' {
-          args = { '-count=1', '-timeout=60s' },
+        require 'neotest-golang' {
+          -- args = { '-count=1', '-timeout=60s' },
         },
         require 'neotest-rust' {
           args = { '--no-capture' },
